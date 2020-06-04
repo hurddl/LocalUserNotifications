@@ -1,6 +1,6 @@
 # Local UserNotifications in macOS.
 
-`NotificationManager.swift` contains example code for displaying user notifications on macOS. It's a simplified version of the custom NotificationManager object I use to display notifications in my [GoPro Tracker](www.dhurd.com) app.
+`NotificationManager.swift` contains example code for displaying user notifications on macOS. It's a simplified version of the custom NotificationManager object I use to display notifications in my [GoPro Tracker](https://www.dhurd.com) app.
 
 
 ### Asking user for notification permission
@@ -21,4 +21,4 @@ fileprivate func askForNotificationsPermission() {
 }
 ~~~
 
-This code displays a notification asking the user for permission to show notifications with Alerts, Badges, and Sound, as indicated in the `options` array parameter. macOS will create a profile for your app in System Preferences -> Notifications where the user can further modify notification permissions granted to your application.
+This code displays a notification asking the user for permission to show notifications with Alerts, Badges, and Sound, as indicated in the `options` array parameter. macOS will create a profile for your app in System Preferences -> Notifications where the user can further modify notification permissions.
