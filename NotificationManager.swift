@@ -51,7 +51,7 @@ class NotificationManager: NSObject {
     
     // MARK: - Private macOS Version Helpers
 
-    // this is a text input notification using NSUserNotificationCenter
+    // display text input notification using NSUserNotificationCenter
     fileprivate func showInteractiveNSUserNotification(for object: Any) {
         // build the notification
         let notification = NSUserNotification()
@@ -71,7 +71,7 @@ class NotificationManager: NSObject {
         NSUserNotificationCenter.default.deliver(notification)
     }
     
-    // this is a basic notification using deprecated NSUserNotificationCenter
+    // display basic notification using deprecated NSUserNotificationCenter
     fileprivate func showBasicNSUserNotification(for object: Any) {
         // build the notification
         // you can use information from the object parameter to create more robust content
@@ -86,12 +86,12 @@ class NotificationManager: NSObject {
     }
     
     
-    // this is a text input custom notification using UNUserNotificationCenter
+    // display text input custom notification using UNUserNotificationCenter
     @available(macOS 10.14, *)
     fileprivate func showInteractiveUNUserNotification(for object: Any) {
         
         // build notification text input action button
-        let customAction = UNTextInputNotificationAction(identifier: "customAction", title: "Click me!", options: .foreground, textInputButtonTitle: "Do it!", textInputPlaceholder: "Enter your text here")
+        let customAction = UNTextInputNotificationAction(identifier: "customAction", title: "Click me!", options: .foreground, textInputButtonTitle: "Submit", textInputPlaceholder: "Enter your text here")
         
         // assign our customAction to a category object
         let category = UNNotificationCategory(identifier: "exampleCategory", actions: [customAction], intentIdentifiers: [])
@@ -115,7 +115,7 @@ class NotificationManager: NSObject {
         UNUserNotificationCenter.current().add(request)
     }
     
-    // this is a basic notification using UNUserNotificationCenter
+    // display basic notification using UNUserNotificationCenter
     @available(macOS 10.14, *)
     fileprivate func showBasicUNUserNotification(for object: Any) {
 
