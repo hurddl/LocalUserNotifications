@@ -9,7 +9,7 @@ There's far more functionality in `UNUserNotificationCenter` than what's in my e
 
 ### Asking user for notification permission
 
-You should ask users for permission to display notifications. This is often done at first launch of the app. Below is an example of asking permission if you are using UNUserNotificationCenter. I put this method in `AppDelegate.swift` and called it from `applicationDidFinishLaunching(_:)`.
+You should ask users for permission to display notifications. This is often done at first launch of the app. Below is an example of asking permission if you are using `UNUserNotificationCenter`. I put this method in `AppDelegate.swift` and called it from `applicationDidFinishLaunching(_:)`.
 
 ~~~
 fileprivate func askForNotificationsPermission() {
