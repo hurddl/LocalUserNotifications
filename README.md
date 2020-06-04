@@ -1,6 +1,6 @@
 # Local UserNotifications in macOS
 
-`NotificationManager.swift` contains example code for displaying local user notifications on macOS. It's a simplified version of the custom NotificationManager object I use to display notifications in my [GoPro Tracker](https://www.dhurd.com) app. The older, deprecated (and less customizable) way is using `NSUserNotificationCenter`. This is necessary for software running on macOS 10.13 and earlier. In 10.14+, you can use `UNUserNotificationCenter`. It's more customizable, and also works in iOS, tvOS, watchOS, Mac Catalyst with minor tweaks.
+`NotificationManager.swift` contains example code for displaying local user notifications on macOS. It's a simplified version of the custom NotificationManager object I use to display notifications in my [GoPro Tracker](https://www.dhurd.com) app. The older, deprecated (and less customizable) way is using `NSUserNotificationCenter`. This is necessary for software running on macOS 10.13 and earlier. In 10.14+, you can use `UNUserNotificationCenter`. It's more customizable, and also works in iOS, tvOS, watchOS, and Mac Catalyst with minor tweaks.
 
 My software has a deployment target of macOS 10.11, so I needed to support both `NSUserNotificationCenter` and `UNUserNotificationCenter`. You'll see the `#available` and `@available` API checks throughout my code.
 
